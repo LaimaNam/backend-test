@@ -29,9 +29,8 @@ app.get('/api/jokes/', async (req, res) => {
 });
 
 app.get('/api/jokes/:amount', async (req, res, next) => {
-  if (typeof req.params.amount == 'number') {
-    let amount = +req.params.amount;
-
+  const amount = parseInt(req.params.amount);
+  if (!isNaN(amount)) {
     let data = [];
 
     for (let i = 0; i < amount; i++) {
@@ -39,6 +38,7 @@ app.get('/api/jokes/:amount', async (req, res, next) => {
       const joke = await response.json();
       data.push(joke.value);
     }
+
     res.json(data);
   } else next();
 });
