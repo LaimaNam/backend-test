@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      <p>get 10 random jokes:</p>
+      <p>
+        GET
+        <a href="https://backend-test-2021-09.herokuapp.com/api/jokes/"
+          >/api/jokes/</a
+        >
+      </p>
+    </div>
+
+    <div>
+      <p>get random jokes of chosen amount:</p>
+      <p>
+        GET
+        <a href="https://backend-test-2021-09.herokuapp.com/api/jokes/3"
+          >/api/jokes/:amount</a
+        >
+      </p>
+    </div>
+
+    <div>
+      <p>get 10 random jokes of chosen category:</p>
+      <p>
+        GET
+        <a href="https://backend-test-2021-09.herokuapp.com/api/jokes/animal"
+          >/api/jokes/:category</a
+        >
+      </p>
+    </div>
+
+    <div>
+      <p>get random jokes of chosen category & amount:</p>
+      <p>
+        GET
+        <a href="https://backend-test-2021-09.herokuapp.com/api/jokes/animal/5"
+          >/api/jokes/:category/:amount</a
+        >
+      </p>
+    </div>
+  </body>
+</html>
